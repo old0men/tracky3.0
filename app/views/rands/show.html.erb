@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rand %>
+
+<div>
+  <%= link_to "Edit this rand", edit_rand_path(@rand) %> |
+  <%= link_to "Back to rands", rands_path %>
+
+  <%= button_to "Destroy this rand", @rand, method: :delete %>
+</div>

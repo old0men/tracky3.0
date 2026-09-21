@@ -1,0 +1,2 @@
+class Rand < ApplicationRecord
+end

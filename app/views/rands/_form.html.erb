@@ -1,0 +1,32 @@
+<%= form_with(model: rand) do |form| %>
+  <% if rand.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(rand.errors.count, "error") %> prohibited this rand from being saved:</h2>
+
+      <ul>
+        <% rand.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :height, style: "display: block" %>
+    <%= form.text_field :height %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<% content_for :title, "New rand" %>
+
+<h1>New rand</h1>
+
+<%= render "form", rand: @rand %>
+
+<br>
+
+<div>
+  <%= link_to "Back to rands", rands_path %>
+</div>
