@@ -1,0 +1,20 @@
+<h1>Timer edit</h1>
+
+<%= form_with method: :timer_edit do |form| %>
+
+  <div>
+    <%= form.label :start %>
+    <%= form.datetime_field :start %>
+  </div>
+
+  <div>
+    <%= form.label :end %>
+     l <%= form.datetime_field :end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to "return", timer_path(params[:id])%>

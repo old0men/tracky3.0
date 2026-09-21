@@ -1,0 +1,26 @@
+<h1>Timers</h1>
+
+
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>start</th>
+        <th>end</th>
+        <th>duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for timer in @timers do %>
+        <tr>
+            <td><%= timer.start.strftime("%H:%M %d.%m.%Y") %></td>
+            <td><%= timer.end.strftime("%H:%M %d.%m.%Y") %>  </td>
+            <td><%= timer.duration %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<%= link_to "new timer", edit_timer_path(params[:id]) %>
